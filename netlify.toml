@@ -1,0 +1,9 @@
+# Build the app from its subdirectory; publish is relative to this base.
+[build]
+  base = "sacha-devos"
+  command = "npm ci --include=dev --include=optional && npm run build"
+  publish = "out"
+
+[build.environment]
+  NODE_VERSION = "22"
+  NEXT_TELEMETRY_DISABLED = "1"

@@ -237,8 +237,9 @@ created automatically.
    repository*. Keep it **private** if you prefer.
 2. **Connect Netlify.** On <https://app.netlify.com>: *Add new site → Import
    an existing project → GitHub* → choose the repository. The settings are
-   read from `netlify.toml` (build command `npm run build`, publish folder
-   `out`); just click *Deploy*.
+   read from the repository-root `netlify.toml` (base directory
+   `sacha-devos`, a clean dependency installation followed by `npm run build`,
+   and publish folder `out` relative to that base); just click *Deploy*.
 3. After a few minutes the site is online at an address like
    `https://sacha-devos.netlify.app`.
 4. **Your own domain (optional).** In Netlify: *Domain management → Add a
@@ -404,7 +405,7 @@ src/
   lib/sizes.ts      `sizes` helpers for responsive images
   fonts/            Archivo (variable width) and Newsreader, self-hosted (OFL)
 public/_headers     Cache headers for Netlify / Cloudflare Pages
-netlify.toml        Netlify build settings
+../netlify.toml     Netlify build settings (at the repository root)
 vercel.json         Vercel cache headers
 ```
 
