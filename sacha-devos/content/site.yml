@@ -1,0 +1,47 @@
+# ─────────────────────────────────────────────────────────────
+#  SITE SETTINGS
+#  Edit the values on the right of each colon, then save.
+#  Text in quotes can contain any character.
+# ─────────────────────────────────────────────────────────────
+
+name: "Sacha DEVOS"
+title: "Photographer & Videographer"
+location: "Based in France"
+availability: "Available Worldwide"
+
+# The public address of the website once it is online.
+# Used for search engines, the sitemap and link previews on social media.
+# Leave empty until you have one. Example: "https://www.sachadevos.com"
+siteUrl: ""
+
+contact:
+  # ⚠️ REPLACE with your real email address before publishing.
+  email: "sacha.devos.pro@gmail.com"
+
+  # Optional contact form. Leave empty to show only the email link.
+  # To enable it: create a free form at https://formspree.io, then paste
+  # the endpoint it gives you here, e.g. "https://formspree.io/f/abcdwxyz".
+  formEndpoint: ""
+
+# Social links. Paste the full address. Leave empty ("") to hide a link.
+social:
+  instagram: ""   # e.g. "https://www.instagram.com/sacha_.raw/"
+  youtube: ""
+  vimeo: ""
+  tiktok: ""
+  linkedin: ""   # e.g. "www.linkedin.com/in/sacha-devos/"
+
+images:
+  # While a category folder in /photos is empty, show the demonstration
+  # images for that category. Set to false to show an empty
+  # "photographs coming soon" state instead.
+  useDemoImages: true
+
+  # Also create AVIF files (about 20–30% smaller than WebP at the same
+  # quality, but much slower to build). WebP and JPEG are always created.
+  avif: false
+
+  # Copy your untouched original files to the website and add a
+  # "View original" link in the full-screen viewer.
+  # Anyone could then download your full-resolution files.
+  publishOriginals: false

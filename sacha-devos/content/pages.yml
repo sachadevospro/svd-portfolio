@@ -1,0 +1,36 @@
+# ─────────────────────────────────────────────────────────────
+#  PAGE TEXT
+#  All the written content of the website. Edit freely.
+#  Keep the quotes around each text. A line starting with "-" is
+#  one item of a list (one paragraph, one principle…).
+# ─────────────────────────────────────────────────────────────
+
+home:
+  description: "I am a photographer and videographer based in France, available worldwide. Motorsport, automotive, aviation, barbershop and further !"
+  introduction: "Visual storytelling through photography and motion. Machines, movement, people, and the details that make every frame unique."
+  ctaQuestion: "Have a project in mind?"
+  ctaHeadline: "Let’s create something exceptional."
+
+about:
+  description: "About Sacha DEVOS, photographer and videographer based in France and available worldwide."
+  biography:
+    - "I am a photographer and videographer based in France, driven by a passion for visual storytelling, technical precision, and cinematic imagery."
+    - "My work explores a wide range of subjects, with a particular focus on sports and the energy surrounding them. From the intensity of fitness and the adrenaline of motorsport to automotive culture, aviation, and everyday life, I capture the atmosphere, movement, and details that make each world unique"
+    - "From carefully composed stills to moving images, I aim to create visuals that feel authentic, distinctive, and purposeful."
+    - "Available worldwide for selected projects, collaborations, and creative commissions."
+  approachTitle: "How I work"
+  approach:
+    - title: "Light first"
+      text: "Every frame starts with the light: where it falls, what it reveals, and what it leaves in shadow."
+    - title: "Movement"
+      text: "Speed, effort and timing. Stills that keep the sense of motion, and films that keep the composition of a still."
+    - title: "Detail"
+      text: "The stitching on a seat, the edge of a blade, chalk on a hand. The small things that make a subject unique."
+  disciplines:
+    - "Photography"
+    - "Videography"
+
+contact:
+  description: "Contact Sacha DEVOS for photography, videography and creative commissions. Based in France, available worldwide."
+  headline: "Let’s work together."
+  text: "For projects, collaborations, photography, videography, and creative commissions."

@@ -1,0 +1,9 @@
+# Demonstration images — NOT Sacha Devos's photographs.
+# They are generated placeholders, used only while the matching folder
+# in /photos is empty. This file shows the captions format you can use
+# in your own folders (see photos/HOW-TO-ADD-PHOTOS.txt).
+
+portrait.jpg:
+  title: "Portrait placeholder"
+  alt: "Demonstration image: Placeholder silhouette in place of a portrait of Sacha Devos."
+

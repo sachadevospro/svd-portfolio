@@ -1,0 +1,38 @@
+# Demonstration images — NOT Sacha Devos's photographs.
+# They are generated placeholders, used only while the matching folder
+# in /photos is empty. This file shows the captions format you can use
+# in your own folders (see photos/HOW-TO-ADD-PHOTOS.txt).
+
+motocross-01.jpg:
+  title: "Dust at sunset"
+  alt: "Demonstration image: Backlit dust clouds drifting over a ridge at sunset."
+  featured: true
+
+motocross-02.jpg:
+  title: "Rising dust"
+  alt: "Demonstration image: Column of sunlit dust rising above a dark hillside."
+
+motocross-03.jpg:
+  title: "Ridge line"
+  alt: "Demonstration image: Wide view of a dusty ridge line against an orange evening sky."
+
+motocross-04.jpg:
+  title: "Ruts"
+  alt: "Demonstration image: Low angle over a rutted dirt track lit from behind by the sun."
+
+motocross-05.jpg:
+  title: "Track surface"
+  alt: "Demonstration image: Backlit ruts in a dirt track converging towards the horizon."
+
+motocross-06.jpg:
+  title: "Haze"
+  alt: "Demonstration image: Warm haze and dust hanging over a dark landscape."
+
+motocross-07.jpg:
+  title: "Last light"
+  alt: "Demonstration image: Grooves of a dirt track glowing in the last light of the day."
+
+motocross-08.jpg:
+  title: "Particles"
+  alt: "Demonstration image: Dust particles glittering in the sun above a hill."
+

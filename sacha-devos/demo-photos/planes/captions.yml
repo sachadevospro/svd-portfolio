@@ -1,0 +1,34 @@
+# Demonstration images — NOT Sacha Devos's photographs.
+# They are generated placeholders, used only while the matching folder
+# in /photos is empty. This file shows the captions format you can use
+# in your own folders (see photos/HOW-TO-ADD-PHOTOS.txt).
+
+planes-01.jpg:
+  title: "Contrails"
+  alt: "Demonstration image: Two contrails crossing a blue-hour sky."
+  featured: true
+
+planes-02.jpg:
+  title: "Against the sun"
+  alt: "Demonstration image: Silhouette of an airliner crossing a hazy setting sun."
+
+planes-03.jpg:
+  title: "Approach"
+  alt: "Demonstration image: Runway lights converging towards an aircraft on approach."
+
+planes-04.jpg:
+  title: "Silhouette"
+  alt: "Demonstration image: Airliner silhouette in front of a glowing evening sky."
+
+planes-05.jpg:
+  title: "Three trails"
+  alt: "Demonstration image: Three contrails over a gradient sky at dusk."
+
+planes-06.jpg:
+  title: "High altitude"
+  alt: "Demonstration image: A distant aircraft drawing a single contrail at blue hour."
+
+planes-07.jpg:
+  title: "Runway"
+  alt: "Demonstration image: Wide view of runway lights at night."
+

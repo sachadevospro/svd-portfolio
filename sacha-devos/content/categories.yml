@@ -1,0 +1,52 @@
+# ─────────────────────────────────────────────────────────────
+#  PHOTOGRAPHY CATEGORIES (series)
+#  The order below is the order used everywhere on the website.
+#
+#  To add a new category:
+#    1. Copy one block below (from "- slug:" to "seoDescription:").
+#    2. Give it a new slug (lowercase, no spaces, e.g. "street").
+#    3. Create a folder with the same name in /photos (e.g. /photos/street).
+#  Its page will exist at /work/<slug>.
+# ─────────────────────────────────────────────────────────────
+
+- slug: motocross
+  title: "Motocross"
+  subtitle: "Capturing speed, raw energy, and the intensity of motorsport."
+  intro: "Dust, noise and split-second timing. Riders, machines and tracks photographed from the edge of the action."
+  seoTitle: "Motocross Photography"
+  seoDescription: "Motocross and motorsport photography by Sacha Devos: riders, jumps, dust and the raw energy of the track."
+  # Optional: file name of the photo to use as this category's cover.
+  # Leave empty to use the first featured photo, or the first photo.
+  cover: ""
+
+- slug: cars
+  title: "Cars"
+  subtitle: "Automotive photography. Design, movement, and mechanical beauty."
+  intro: "Vehicle portraits, details and rolling shots, lit to show the lines a designer drew and the way a car moves."
+  seoTitle: "Automotive Photography"
+  seoDescription: "Automotive photography by Sacha Devos: car portraits, design details and cinematic rolling shots."
+  cover: ""
+
+- slug: planes
+  title: "Planes"
+  subtitle: "A study of aviation, engineering, scale, and movement."
+  intro: "Aircraft on the ground and in the air: silhouettes, details and the scale of the machines that fly them."
+  seoTitle: "Aviation Photography"
+  seoDescription: "Aviation photography by Sacha Devos: aircraft, cockpits, airport environments and dramatic skies."
+  cover: ""
+
+- slug: barbershop
+  title: "Barbershop"
+  subtitle: "Portraits, craftsmanship, atmosphere, and the details behind the chair."
+  intro: "The barbers, the tools and the light of the shop. Portraits of a craft practised with precision."
+  seoTitle: "Barbershop Photography"
+  seoDescription: "Barbershop photography by Sacha Devos: editorial portraits, craftsmanship, tools and atmosphere."
+  cover: ""
+
+- slug: fitness
+  title: "Fitness"
+  subtitle: "Strength, discipline, movement, and the human form."
+  intro: "Athletes, training and hard light. Effort photographed as it happens, without staging the sweat."
+  seoTitle: "Fitness Photography"
+  seoDescription: "Fitness and sport photography by Sacha Devos: athletes, strength training, movement and dramatic light."
+  cover: ""

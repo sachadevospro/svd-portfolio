@@ -1,0 +1,11 @@
+# Cache rules for Netlify and Cloudflare Pages (ignored elsewhere).
+# Generated images and scripts have unique names, so they can be cached forever.
+/_img/*
+  Cache-Control: public, max-age=31536000, immutable
+/_video/*
+  Cache-Control: public, max-age=31536000, immutable
+/_next/static/*
+  Cache-Control: public, max-age=31536000, immutable
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin

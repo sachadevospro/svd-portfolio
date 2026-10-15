@@ -1,0 +1,34 @@
+# Demonstration images — NOT Sacha Devos's photographs.
+# They are generated placeholders, used only while the matching folder
+# in /photos is empty. This file shows the captions format you can use
+# in your own folders (see photos/HOW-TO-ADD-PHOTOS.txt).
+
+barbershop-01.jpg:
+  title: "The pole"
+  alt: "Demonstration image: Out-of-focus barber pole among warm tungsten lights."
+  featured: true
+
+barbershop-02.jpg:
+  title: "Steel"
+  alt: "Demonstration image: Two straight razors resting on dark leather."
+
+barbershop-03.jpg:
+  title: "Warm light"
+  alt: "Demonstration image: Warm bokeh and a striped barber pole in a dark shop."
+
+barbershop-04.jpg:
+  title: "Tungsten"
+  alt: "Demonstration image: Soft circles of tungsten light in a dark interior."
+
+barbershop-05.jpg:
+  title: "Blades"
+  alt: "Demonstration image: Polished steel blades catching a single light."
+
+barbershop-06.jpg:
+  title: "Shop at night"
+  alt: "Demonstration image: Wide view of a barbershop interior lit by warm lamps."
+
+barbershop-07.jpg:
+  title: "Edge"
+  alt: "Demonstration image: Close view of a steel edge on dark leather."
+

@@ -1,0 +1,17 @@
+# Demonstration images — NOT Sacha Devos's photographs.
+# They are generated placeholders, used only while the matching folder
+# in /photos is empty. This file shows the captions format you can use
+# in your own folders (see photos/HOW-TO-ADD-PHOTOS.txt).
+
+hero-01.jpg:
+  title: "Light trails on a wet road"
+  alt: "Demonstration image: Long-exposure red and white light trails sweeping along a wet road at night."
+
+hero-02.jpg:
+  title: "Dust at sunset"
+  alt: "Demonstration image: Backlit dust rising over a dark ridge at sunset."
+
+hero-03.jpg:
+  title: "Runway at night"
+  alt: "Demonstration image: Runway edge lights converging towards a landing aircraft at dusk."
+

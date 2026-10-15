@@ -1,0 +1,34 @@
+# Demonstration images — NOT Sacha Devos's photographs.
+# They are generated placeholders, used only while the matching folder
+# in /photos is empty. This file shows the captions format you can use
+# in your own folders (see photos/HOW-TO-ADD-PHOTOS.txt).
+
+fitness-01.jpg:
+  title: "Rings"
+  alt: "Demonstration image: Gymnastic rings hanging in a single cone of light."
+  featured: true
+
+fitness-02.jpg:
+  title: "Morning light"
+  alt: "Demonstration image: Shafts of light falling across a barbell on a gym floor."
+
+fitness-03.jpg:
+  title: "Chalk"
+  alt: "Demonstration image: Cloud of chalk dust lit from the side."
+
+fitness-04.jpg:
+  title: "Spotlight"
+  alt: "Demonstration image: A single spotlight cutting through a dark training hall."
+
+fitness-05.jpg:
+  title: "Dust"
+  alt: "Demonstration image: Chalk particles suspended in dark air."
+
+fitness-06.jpg:
+  title: "Rays"
+  alt: "Demonstration image: Wide view of light rays over a barbell."
+
+fitness-07.jpg:
+  title: "Beam"
+  alt: "Demonstration image: A narrow beam of light over a training floor."
+

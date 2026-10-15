@@ -1,0 +1,38 @@
+# Demonstration images — NOT Sacha Devos's photographs.
+# They are generated placeholders, used only while the matching folder
+# in /photos is empty. This file shows the captions format you can use
+# in your own folders (see photos/HOW-TO-ADD-PHOTOS.txt).
+
+cars-01.jpg:
+  title: "Night trails"
+  alt: "Demonstration image: Red and white light trails bending along a wet road at night."
+  featured: true
+
+cars-02.jpg:
+  title: "Body line"
+  alt: "Demonstration image: Studio highlight tracing the curved body line of a car on black."
+
+cars-03.jpg:
+  title: "Signature"
+  alt: "Demonstration image: Two LED headlight signatures glowing in the dark."
+
+cars-04.jpg:
+  title: "Tail lights"
+  alt: "Demonstration image: Red tail-light trails sweeping through a city at night."
+
+cars-05.jpg:
+  title: "Warm reflection"
+  alt: "Demonstration image: Warm studio reflection running along a curved car panel."
+
+cars-06.jpg:
+  title: "Crease"
+  alt: "Demonstration image: Cool highlights on the crease of a dark car body."
+
+cars-07.jpg:
+  title: "Panel light"
+  alt: "Demonstration image: Soft light gliding over a black car panel."
+
+cars-08.jpg:
+  title: "Wet road"
+  alt: "Demonstration image: Light trails and blurred city lights reflected on a wet road."
+

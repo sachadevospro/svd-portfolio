@@ -1,0 +1,32 @@
+# ─────────────────────────────────────────────────────────────
+#  EXAMPLE — copy this file into a category folder (for example
+#  photos/cars/) and rename the copy to "captions.yml".
+#
+#  Each block starts with the exact file name of a photo in that
+#  folder, followed by a colon. Every line below it is optional.
+#  Indent the lines with two spaces (not tabs).
+# ─────────────────────────────────────────────────────────────
+
+001-porsche-night.jpg:
+  title: "Night run"
+  caption: "Porsche 911 GT3 on the coast road."
+  # What the photo shows, for blind visitors and search engines.
+  alt: "A grey sports car driving along a coastal road at night, its tail lights glowing."
+  project: "Private commission"
+  date: "2026"
+  # featured: true → shown full width in the gallery, and used as the
+  # category's cover on the home page (the first featured photo is).
+  featured: true
+
+002-interior-detail.jpg:
+  title: "Stitching"
+  alt: "Close-up of red stitching on a black leather seat."
+
+003-rolling-shot.jpg:
+  # hidden: true → the photo stays in the folder but is not published.
+  hidden: true
+
+004-garage.jpg:
+  # order: a number to move a photo without renaming it (lower = earlier).
+  order: 1
+  alt: "A car under a cover in a dim garage."

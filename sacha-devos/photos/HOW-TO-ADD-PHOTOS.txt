@@ -1,0 +1,35 @@
+HOW TO ADD YOUR PHOTOGRAPHS
+===========================
+
+1. Put the photo in the folder of its category:
+
+     photos/motocross/     photos/cars/      photos/planes/
+     photos/barbershop/    photos/fitness/
+
+     photos/hero/    → the large photos at the top of the home page
+                       (several photos = a slow slideshow;
+                        an .mp4 video here = a silent background video)
+     photos/about/   → your portrait for the About page (one photo)
+
+2. Name it so it sorts in the order you want. The website shows the
+   photos of a folder in the order of their names:
+
+     001-rider-jump.jpg
+     002-start-line.jpg
+     010-podium.jpg
+
+3. Optional: add a title, a caption and a description in a file called
+   captions.yml inside the same folder (see captions-example.yml).
+
+4. Preview: run `npm run dev` and open http://localhost:3000
+   (it updates by itself when you add or change a photo).
+
+5. Publish: send the changes to GitHub (see README.md, "Publishing
+   updates"). The website rebuilds and goes live in a few minutes.
+
+As soon as a folder contains one of your photos, the demonstration
+images of that category disappear.
+
+Best file to export: JPEG, quality 90–100, sRGB colours, 4000 to 6000
+pixels on the long side. Never upscale. The website makes the smaller
+web versions itself and never modifies your file.
