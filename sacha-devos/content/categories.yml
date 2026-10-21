@@ -9,15 +9,6 @@
 #  Its page will exist at /work/<slug>.
 # ─────────────────────────────────────────────────────────────
 
-- slug: cfs-26-27
-  title: "CFS 26-27"
-  subtitle: "Championnat de France Supercross 2026–2027."
-  intro: "Speed, precision and raw intensity. Riders pushing their limits, spectacular jumps and decisive moments captured throughout the 2026–2027 French Supercross Championship."
-  seoTitle: "CFS 26-27 Photography"
-  seoDescription: "Photography of the 2026–2027 French Supercross Championship by Sacha Devos: riders, racing action, jumps and the intensity of French motocross."
-  # Optional: file name of the photo to use as this category's cover.
-  # Leave empty to use the first featured photo, or the first photo.
-  cover: ""
 
 - slug: cars
   title: "Cars"
@@ -57,4 +48,14 @@
   intro: "The intensity of motocross at the highest level. Riders, teams and race action captured through the dust, speed and raw energy of the MXGP World Championship."
   seoTitle: "MXGP Photography"
   seoDescription: "MXGP photography by Sacha Devos: motocross riders, world championship racing, teams, track action and behind-the-scenes moments."
+  cover: ""
+
+- slug: cfs-26-27
+  title: "CFS 26-27"
+  subtitle: "Championnat de France Supercross 2026–2027."
+  intro: "Speed, precision and raw intensity. Riders pushing their limits, spectacular jumps and decisive moments captured throughout the 2026–2027 French Supercross Championship."
+  seoTitle: "CFS 26-27 Photography"
+  seoDescription: "Photography of the 2026–2027 French Supercross Championship by Sacha Devos: riders, racing action, jumps and the intensity of French motocross."
+  # Optional: file name of the photo to use as this category's cover.
+  # Leave empty to use the first featured photo, or the first photo.
   cover: ""
