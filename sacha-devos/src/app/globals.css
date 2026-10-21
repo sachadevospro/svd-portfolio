@@ -28,6 +28,7 @@
   --rose: #ff7f96;
   --violet: #b49bff;
   --sky: #8cc8ff;
+  --blue: #5aa2ff; /* CTA « Have a project in mind? » */
   --accent: var(--amber); /* default; overridden per context below */
 
   /* Text gradients (used through --tg on gradient titles) */
@@ -35,6 +36,7 @@
   --grad-cool: linear-gradient(100deg, #eafffc 0%, var(--teal) 50%, var(--sky) 100%);
   --grad-rose: linear-gradient(100deg, #fff0f3 0%, var(--rose) 50%, var(--amber) 100%);
   --grad-violet: linear-gradient(100deg, #f3efff 0%, var(--violet) 50%, var(--sky) 100%);
+  --grad-blue: linear-gradient(100deg, #e8f1ff 0%, #5aa2ff 50%, #3d7bff 100%);
   --grad-soft: linear-gradient(100deg, var(--text) 0%, #ffe3c2 50%, var(--text) 100%);
   --grad-duo: linear-gradient(100deg, var(--amber) 0%, var(--text) 50%, var(--teal) 100%);
 
@@ -1339,7 +1341,7 @@ html.js .cta .reveal.is-revealed {
   padding-block: clamp(80px, 9vw, 140px);
 }
 .cta__question {
-  color: var(--teal);
+  color: var(--blue);
   margin-bottom: clamp(16px, 2vw, 28px);
 }
 .cta__headline {
@@ -1350,7 +1352,7 @@ html.js .cta .reveal.is-revealed {
   letter-spacing: -0.025em;
   max-width: 14ch;
   text-wrap: balance;
-  --tg: var(--grad-rose);
+  --tg: var(--grad-blue);
 }
 .cta--compact .cta__headline {
   font-size: clamp(40px, 6vw, 104px);
@@ -1364,7 +1366,15 @@ html.js .cta .reveal.is-revealed {
 }
 .cta__email {
   font-size: clamp(16px, 1.4vw, 20px);
-  color: var(--rose);
+  color: var(--blue);
+}
+.cta .button {
+  color: var(--blue);
+  border-color: var(--blue);
+}
+.cta .button:hover {
+  background: var(--blue);
+  color: var(--ink);
 }
 
 /* 9. Series page ----------------------------------------------------------- */
