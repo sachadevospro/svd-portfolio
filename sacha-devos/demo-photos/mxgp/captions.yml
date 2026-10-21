@@ -1,0 +1,38 @@
+# Demonstration images — NOT Sacha Devos's photographs.
+# They are generated placeholders, used only while the matching folder
+# in /photos is empty. This file shows the captions format you can use
+# in your own folders (see photos/HOW-TO-ADD-PHOTOS.txt).
+
+mxgp(1).jpg:
+  title: "Dust at sunset"
+  alt: "Demonstration image: Backlit dust clouds drifting over a ridge at sunset."
+  featured: true
+
+mxgp(2).jpg:
+  title: "Rising dust"
+  alt: "Demonstration image: Column of sunlit dust rising above a dark hillside."
+
+mxgp(3).jpg:
+  title: "Ridge line"
+  alt: "Demonstration image: Wide view of a dusty ridge line against an orange evening sky."
+
+mxgp(4).jpg:
+  title: "Ruts"
+  alt: "Demonstration image: Low angle over a rutted dirt track lit from behind by the sun."
+
+mxgp(5).jpg:
+  title: "Track surface"
+  alt: "Demonstration image: Backlit ruts in a dirt track converging towards the horizon."
+
+mxgp(6).jpg:
+  title: "Haze"
+  alt: "Demonstration image: Warm haze and dust hanging over a dark landscape."
+
+mxgp(7).jpg:
+  title: "Last light"
+  alt: "Demonstration image: Grooves of a dirt track glowing in the last light of the day."
+
+mxgp(8).jpg:
+  title: "Particles"
+  alt: "Demonstration image: Dust particles glittering in the sun above a hill."
+

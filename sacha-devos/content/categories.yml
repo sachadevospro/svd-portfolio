@@ -9,12 +9,12 @@
 #  Its page will exist at /work/<slug>.
 # ─────────────────────────────────────────────────────────────
 
-- slug: motocross
-  title: "Motocross"
-  subtitle: "Capturing speed, raw energy, and the intensity of motorsport."
-  intro: "Dust, noise and split-second timing. Riders, machines and tracks photographed from the edge of the action."
-  seoTitle: "Motocross Photography"
   seoDescription: "Motocross and motorsport photography by Sacha Devos: riders, jumps, dust and the raw energy of the track."
+  title: "CFS 26-27"
+  subtitle: "Championnat de France Supercross 2026–2027."
+  intro: "Speed, precision and raw intensity. Riders pushing their limits, spectacular jumps and decisive moments captured throughout the 2026–2027 French Supercross Championship."
+  seoTitle: "CFS 26-27 Photography"
+  seoDescription: "Photography of the 2026–2027 French Supercross Championship by Sacha Devos: riders, racing action, jumps and the intensity of French motocross."
   # Optional: file name of the photo to use as this category's cover.
   # Leave empty to use the first featured photo, or the first photo.
   cover: ""
@@ -49,4 +49,12 @@
   intro: "Athletes, training and hard light. Effort photographed as it happens, without staging the sweat."
   seoTitle: "Fitness Photography"
   seoDescription: "Fitness and sport photography by Sacha Devos: athletes, strength training, movement and dramatic light."
+  cover: ""
+
+- slug: mxgp
+  title: "MXGP"
+  subtitle: "Motocross World Championship"
+  intro: "The intensity of motocross at the highest level. Riders, teams and race action captured through the dust, speed and raw energy of the MXGP World Championship."
+  seoTitle: "MXGP Photography"
+  seoDescription: "MXGP photography by Sacha Devos: motocross riders, world championship racing, teams, track action and behind-the-scenes moments."
   cover: ""
