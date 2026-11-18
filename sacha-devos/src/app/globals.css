@@ -1,5 +1,5 @@
 /* ==========================================================================
-   SACHA DEVOS — global styles
+   SACHA DEVOS — global styles (palette violet / noir / blanc)
    1. Tokens        6. Hero             11. Lightbox
    2. Base          7. Selected work    12. Work index
    3. Type          8. Home sections    13. About
@@ -9,36 +9,40 @@
 
 /* 1. Tokens ---------------------------------------------------------------- */
 :root {
-  --ink: #080808;
-  --ink-2: #111111;
-  --ink-3: #1a1a19;
-  --paper: #f4f2ee;
-  --ash: #a5a5a5; /* secondary text: 8:1 on --ink */
-  --line: #292929;
-  --line-soft: rgba(244, 242, 238, 0.1);
-  --steel: #c9c7c2;
-  --signal: #7c9dff; /* keyboard focus only */
+  /* Les trois couleurs de la marque */
+  --violet: #7c3aed;
+  --ink: #0a090c;
+  --paper: #f3e8ff;
 
-  /* Text colors: one accent per subject (all >= 9:1 on --ink).
-     amber = golden hour · teal = shadows · rose = skin tones
-     violet = night · sky = blue hour */
-  --text: #f4f2ee;
-  --amber: #ffb36b;
-  --teal: #5ed3c6;
-  --rose: #ff7f96;
-  --violet: #b49bff;
-  --sky: #8cc8ff;
-  --blue: #5aa2ff; /* CTA « Have a project in mind? » */
-  --accent: var(--amber); /* default; overridden per context below */
+  /* Nuances dérivées des trois couleurs (mélanges ink/paper/violet) */
+  --violet-soft: #b791f6; /* 50 % violet + 50 % blanc : texte accent, 7.9:1 sur --ink */
+  --ink-2: #161418; /* 5 % blanc sur noir */
+  --ink-3: #1f1d22; /* 9 % blanc sur noir */
+  --ash: #a19aaa; /* texte secondaire : ~7.5:1 sur --ink */
+  --line: #28262c;
+  --line-soft: rgba(243, 232, 255, 0.1);
+  --steel: #c4bbce;
+  --signal: #b791f6; /* focus clavier uniquement */
 
-  /* Text gradients (used through --tg on gradient titles) */
-  --grad-warm: linear-gradient(100deg, #fff4e6 0%, var(--amber) 50%, #ff7a59 100%);
-  --grad-cool: linear-gradient(100deg, #eafffc 0%, var(--teal) 50%, var(--sky) 100%);
-  --grad-rose: linear-gradient(100deg, #fff0f3 0%, var(--rose) 50%, var(--amber) 100%);
-  --grad-violet: linear-gradient(100deg, #f3efff 0%, var(--violet) 50%, var(--sky) 100%);
-  --grad-blue: linear-gradient(100deg, #e8f1ff 0%, #5aa2ff 50%, #3d7bff 100%);
-  --grad-soft: linear-gradient(100deg, var(--text) 0%, #ffe3c2 50%, var(--text) 100%);
-  --grad-duo: linear-gradient(100deg, var(--amber) 0%, var(--text) 50%, var(--teal) 100%);
+  /* Couleurs de texte : tout l'accent passe par le violet.
+     Les anciens noms sont conservés pour ne pas toucher au reste du CSS. */
+  --text: #f3e8ff;
+  --amber: var(--violet-soft);
+  --teal: var(--violet-soft);
+  --rose: var(--violet-soft);
+  --violet-tint: var(--violet-soft);
+  --sky: var(--violet-soft);
+  --blue: var(--violet-soft); /* CTA « Have a project in mind? » */
+  --accent: var(--violet-soft); /* défaut ; surchargé par contexte plus bas */
+
+  /* Dégradés de texte (utilisés via --tg sur les titres) */
+  --grad-warm: linear-gradient(100deg, var(--paper) 0%, var(--violet-soft) 50%, var(--violet) 100%);
+  --grad-cool: linear-gradient(100deg, var(--violet) 0%, var(--violet-soft) 50%, var(--paper) 100%);
+  --grad-rose: linear-gradient(100deg, var(--paper) 0%, var(--violet-soft) 50%, var(--violet) 100%);
+  --grad-violet: linear-gradient(100deg, var(--paper) 0%, var(--violet-soft) 50%, var(--violet) 100%);
+  --grad-blue: linear-gradient(100deg, var(--paper) 0%, var(--violet-soft) 50%, var(--violet) 100%);
+  --grad-soft: linear-gradient(100deg, var(--text) 0%, var(--violet-soft) 50%, var(--text) 100%);
+  --grad-duo: linear-gradient(100deg, var(--violet-soft) 0%, var(--text) 50%, var(--violet-soft) 100%);
 
   --sans: var(--font-sans), "Helvetica Neue", Arial, sans-serif;
   --serif: var(--font-serif), Georgia, "Times New Roman", serif;
@@ -60,7 +64,7 @@
   --name-size: calc((100vw - 2 * var(--gutter) - 24px) / 9.06);
 }
 
-/* Accent by context. Lists cycle amber > teal > rose > violet > sky.
+/* Accent by context. Lists alternate violet-soft > paper > violet-soft > paper > violet-soft.
    Written with :where() so an explicit data-accent always wins. */
 :where(
     .work-panel li,
@@ -70,7 +74,7 @@
     .fields__list > *,
     .approach__item
   ):nth-child(5n + 1) {
-  --accent: var(--amber);
+  --accent: var(--violet-soft);
 }
 :where(
     .work-panel li,
@@ -80,7 +84,7 @@
     .fields__list > *,
     .approach__item
   ):nth-child(5n + 2) {
-  --accent: var(--teal);
+  --accent: var(--paper);
 }
 :where(
     .work-panel li,
@@ -90,7 +94,7 @@
     .fields__list > *,
     .approach__item
   ):nth-child(5n + 3) {
-  --accent: var(--rose);
+  --accent: var(--violet-soft);
 }
 :where(
     .work-panel li,
@@ -100,7 +104,7 @@
     .fields__list > *,
     .approach__item
   ):nth-child(5n + 4) {
-  --accent: var(--violet);
+  --accent: var(--paper);
 }
 :where(
     .work-panel li,
@@ -110,39 +114,40 @@
     .fields__list > *,
     .approach__item
   ):nth-child(5n + 5) {
-  --accent: var(--sky);
+  --accent: var(--violet-soft);
 }
 :where(.panel--a) {
-  --accent: var(--amber);
+  --accent: var(--violet-soft);
 }
 :where(.panel--b) {
-  --accent: var(--teal);
+  --accent: var(--paper);
 }
 :where(.panel--c) {
-  --accent: var(--rose);
+  --accent: var(--violet-soft);
 }
 :where(.panel--d) {
-  --accent: var(--violet);
+  --accent: var(--paper);
 }
 :where(.panel--e) {
-  --accent: var(--sky);
+  --accent: var(--violet-soft);
 }
 /* Explicit choice, on any element: <main data-accent="teal"> colors the
-   whole series page (title, numbers, breadcrumb) in that accent. */
+   whole series page (title, numbers, breadcrumb) in that accent.
+   Les cinq valeurs existantes sont conservées ; "teal" et "rose" passent en blanc. */
 [data-accent="amber"] {
-  --accent: var(--amber);
+  --accent: var(--violet-soft);
 }
 [data-accent="teal"] {
-  --accent: var(--teal);
+  --accent: var(--paper);
 }
 [data-accent="rose"] {
-  --accent: var(--rose);
+  --accent: var(--violet-soft);
 }
 [data-accent="violet"] {
-  --accent: var(--violet);
+  --accent: var(--violet-soft);
 }
 [data-accent="sky"] {
-  --accent: var(--sky);
+  --accent: var(--paper);
 }
 
 @media (min-width: 900px) {
@@ -228,8 +233,8 @@ button {
 }
 
 ::selection {
-  background: var(--paper);
-  color: var(--ink);
+  background: var(--violet);
+  color: var(--paper);
 }
 
 :focus-visible {
@@ -266,8 +271,8 @@ button {
   left: 12px;
   z-index: 200;
   padding: 12px 18px;
-  background: var(--paper);
-  color: var(--ink);
+  background: var(--violet);
+  color: var(--paper);
   font-size: 14px;
   transform: translateY(-160%);
   transition: transform var(--fast) var(--ease);
@@ -397,8 +402,8 @@ button {
   .approach__title::selection,
   .not-found__title::selection,
   .site-footer__mark::selection {
-    -webkit-text-fill-color: var(--ink);
-    color: var(--ink);
+    -webkit-text-fill-color: var(--paper);
+    color: var(--paper);
   }
 }
 @keyframes sheen {
@@ -434,7 +439,7 @@ button {
     border-color 400ms ease;
 }
 .site-header.is-solid {
-  background: rgba(8, 8, 8, 0.86);
+  background: rgba(10, 9, 12, 0.86);
   -webkit-backdrop-filter: blur(14px);
   backdrop-filter: blur(14px);
   border-bottom-color: var(--line-soft);
@@ -504,7 +509,7 @@ button {
 .site-nav__link[aria-current="page"],
 .site-nav__link[data-active],
 .site-nav__link[aria-expanded="true"] {
-  color: var(--amber);
+  color: var(--violet-soft);
 }
 .site-nav__link::after {
   content: "";
@@ -609,7 +614,7 @@ button {
 }
 .work-panel__all:hover,
 .work-panel__all[aria-current="page"] {
-  color: var(--amber);
+  color: var(--violet-soft);
 }
 
 @keyframes panel-in {
@@ -654,7 +659,7 @@ button {
   padding: clamp(24px, 6vh, 56px) var(--gutter) 32px;
 }
 .mobile-menu__label {
-  color: var(--teal);
+  color: var(--violet-soft);
   margin-bottom: 8px;
 }
 .mobile-menu__series li {
@@ -714,7 +719,7 @@ button {
   text-transform: uppercase;
 }
 .mobile-menu__pages a[aria-current="page"] {
-  color: var(--amber);
+  color: var(--violet-soft);
   text-decoration: underline;
   text-underline-offset: 6px;
 }
@@ -745,7 +750,7 @@ button {
   min-height: 340px;
   max-height: 1400px;
   overflow: hidden;
-  background: #000;
+  background: var(--ink);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -791,11 +796,11 @@ button {
   inset: 0;
   background: linear-gradient(
     180deg,
-    rgba(8, 8, 8, 0.5) 0%,
-    rgba(8, 8, 8, 0) 20%,
-    rgba(8, 8, 8, 0) 46%,
-    rgba(8, 8, 8, 0.55) 74%,
-    rgba(8, 8, 8, 0.9) 100%
+    rgba(10, 9, 12, 0.5) 0%,
+    rgba(10, 9, 12, 0) 20%,
+    rgba(10, 9, 12, 0) 46%,
+    rgba(10, 9, 12, 0.55) 74%,
+    rgba(10, 9, 12, 0.9) 100%
   );
 }
 
@@ -809,7 +814,7 @@ button {
   position: absolute;
   width: 18px;
   height: 18px;
-  border: 0 solid rgba(244, 242, 238, 0.55);
+  border: 0 solid rgba(243, 232, 255, 0.55);
   animation: frame-in 1200ms var(--ease) 600ms both;
 }
 .hero__frame span:nth-child(1) {
@@ -860,10 +865,10 @@ button {
   text-shadow: 0 1px 12px rgba(0, 0, 0, 0.35);
 }
 .hero__role {
-  color: var(--amber);
+  color: var(--violet-soft);
 }
 .hero__place {
-  color: var(--teal);
+  color: var(--paper);
 }
 .hero__name {
   font-family: var(--sans);
@@ -885,7 +890,7 @@ button {
 .hero__line > span {
   display: inline-block;
   animation: rise 1500ms var(--ease) 150ms both;
-  /* First word in golden-hour tones, second in teal: the classic cinema grade. */
+  /* Premier mot en blanc vers violet, second mot en violet vers blanc. */
   --bs: 100% 100%;
   --tg: var(--grad-warm);
 }
@@ -927,7 +932,7 @@ button {
   position: relative;
   width: 40px;
   height: 1px;
-  background: rgba(244, 242, 238, 0.3);
+  background: rgba(243, 232, 255, 0.3);
   overflow: hidden;
 }
 .hero__scroll-line::after {
@@ -998,7 +1003,7 @@ button {
   display: block;
   width: 100%;
   height: 1px;
-  background: rgba(244, 242, 238, 0.3);
+  background: rgba(243, 232, 255, 0.3);
   overflow: hidden;
 }
 .hero__dot-fill::after {
@@ -1075,7 +1080,7 @@ button {
   margin: 0;
 }
 .section-head > .label:first-child {
-  color: var(--amber);
+  color: var(--violet-soft);
 }
 
 .panels {
@@ -1270,14 +1275,14 @@ html.js .reveal.is-revealed .panel__cta {
   gap: 6px 24px;
   padding-top: 80px;
   padding-bottom: clamp(18px, 2.4vw, 32px);
-  background: linear-gradient(180deg, rgba(8, 8, 8, 0), rgba(8, 8, 8, 0.7));
+  background: linear-gradient(180deg, rgba(10, 9, 12, 0), rgba(10, 9, 12, 0.7));
   font-size: 14px;
   color: var(--steel);
 }
 .interlude__title {
   font-family: var(--serif);
   font-size: 20px;
-  color: var(--amber);
+  color: var(--violet-soft);
 }
 
 .statement {
@@ -1289,7 +1294,7 @@ html.js .reveal.is-revealed .panel__cta {
 }
 .statement__label {
   grid-column: 1 / -1;
-  color: var(--amber);
+  color: var(--violet-soft);
 }
 .statement__body {
   grid-column: 1 / -1;
@@ -1308,7 +1313,7 @@ html.js .reveal.is-revealed .panel__cta {
   display: inline-block;
   margin-top: clamp(24px, 3vw, 40px);
   font-size: 15px;
-  color: var(--amber);
+  color: var(--violet-soft);
 }
 @media (min-width: 900px) {
   .statement__label {
@@ -1369,11 +1374,13 @@ html.js .cta .reveal.is-revealed {
   color: var(--blue);
 }
 .cta .button {
-  color: var(--blue);
-  border-color: var(--blue);
+  color: var(--paper);
+  background: var(--violet);
+  border-color: var(--violet);
 }
 .cta .button:hover {
-  background: var(--blue);
+  background: var(--paper);
+  border-color: var(--paper);
   color: var(--ink);
 }
 
@@ -1500,7 +1507,7 @@ html.js .cta .reveal.is-revealed {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(8, 8, 8, 0.55);
+  background: rgba(10, 9, 12, 0.55);
   transition: background-color 900ms var(--ease);
 }
 .next-series__media img {
@@ -1508,7 +1515,7 @@ html.js .cta .reveal.is-revealed {
 }
 @media (hover: hover) {
   .next-series:hover .next-series__media::after {
-    background: rgba(8, 8, 8, 0.35);
+    background: rgba(10, 9, 12, 0.35);
   }
   .next-series:hover .next-series__media img {
     transform: scale(1.03);
@@ -1678,7 +1685,7 @@ html.js .photo.is-loaded img {
   z-index: 100;
   display: grid;
   grid-template-rows: auto minmax(0, 1fr) auto;
-  background: #060606;
+  background: #060507;
   opacity: 0;
   transition: opacity 380ms var(--ease);
 }
@@ -1782,7 +1789,7 @@ html.js .photo.is-loaded img {
   content: "";
   position: absolute;
   inset: 0;
-  background: var(--paper);
+  background: var(--violet);
   opacity: 0.8;
   animation: loading 1100ms var(--ease-io) infinite;
 }
@@ -2018,7 +2025,7 @@ html.js .photo.is-loaded img {
 }
 .about-head__role {
   margin-top: clamp(14px, 2vw, 28px);
-  color: var(--teal);
+  color: var(--violet-soft);
 }
 .about-head__portrait {
   grid-column: 1 / -1;
@@ -2089,7 +2096,7 @@ html.js .photo.is-loaded img {
 .approach > .label {
   padding-top: 18px;
   border-top: 1px solid var(--line);
-  color: var(--teal);
+  color: var(--violet-soft);
 }
 .approach__list {
   display: grid;
@@ -2142,7 +2149,7 @@ html.js .approach__item.reveal.is-revealed {
   border-top: 1px solid var(--line);
 }
 .fields__head .label:first-child {
-  color: var(--violet);
+  color: var(--violet-soft);
 }
 .fields__list {
   display: grid;
@@ -2236,7 +2243,7 @@ html.js .approach__item.reveal.is-revealed {
   font-weight: 300;
   line-height: 1.2;
   overflow-wrap: anywhere;
-  color: var(--rose);
+  color: var(--violet-soft);
 }
 .copy-email {
   margin-top: 14px;
@@ -2250,11 +2257,11 @@ html.js .approach__item.reveal.is-revealed {
   transition: color var(--fast) ease;
 }
 .copy-email:hover {
-  color: var(--teal);
+  color: var(--violet-soft);
 }
 .contact__subhead {
   margin-top: 40px;
-  color: var(--teal);
+  color: var(--violet-soft);
 }
 .contact__social {
   display: flex;
@@ -2267,7 +2274,7 @@ html.js .approach__item.reveal.is-revealed {
   transition: color var(--fast) ease;
 }
 .contact__social a:hover {
-  color: var(--teal);
+  color: var(--violet-soft);
 }
 .contact__place {
   margin-top: 12px;
@@ -2275,7 +2282,7 @@ html.js .approach__item.reveal.is-revealed {
 }
 .contact__form > .label {
   margin-bottom: 24px;
-  color: var(--amber);
+  color: var(--violet-soft);
 }
 @media (min-width: 1000px) {
   .contact__grid {
@@ -2310,7 +2317,7 @@ html.js .approach__item.reveal.is-revealed {
   transition: color var(--fast) ease;
 }
 .field:focus-within label {
-  color: var(--teal);
+  color: var(--violet-soft);
 }
 .field input,
 .field select,
@@ -2328,7 +2335,7 @@ html.js .approach__item.reveal.is-revealed {
 }
 .field select {
   appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%23a5a5a5' stroke-width='1.2'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%23a19aaa' stroke-width='1.2'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 2px center;
 }
@@ -2344,7 +2351,7 @@ html.js .approach__item.reveal.is-revealed {
 .field select:focus,
 .field textarea:focus {
   outline: none;
-  border-bottom-color: var(--paper);
+  border-bottom-color: var(--violet);
 }
 .field input:focus-visible,
 .field select:focus-visible,
@@ -2352,7 +2359,7 @@ html.js .approach__item.reveal.is-revealed {
   box-shadow: 0 2px 0 0 var(--signal);
 }
 .field ::placeholder {
-  color: #6f6f6f;
+  color: #736d79;
 }
 .form__actions {
   display: flex;
@@ -2361,9 +2368,11 @@ html.js .approach__item.reveal.is-revealed {
   gap: 16px 24px;
 }
 .form__error {
-  color: #ffb4a8;
+  color: var(--paper);
   font-size: 15px;
   max-width: 52ch;
+  padding-left: 12px;
+  border-left: 2px solid var(--violet);
 }
 .form__error a {
   text-decoration: underline;
@@ -2378,7 +2387,7 @@ html.js .approach__item.reveal.is-revealed {
   font-family: var(--serif);
   font-size: 34px;
   font-weight: 300;
-  color: var(--teal);
+  color: var(--violet-soft);
 }
 
 /* 15. Footer, 404, motion -------------------------------------------------- */
@@ -2408,7 +2417,7 @@ html.js .approach__item.reveal.is-revealed {
 }
 .site-footer__heading {
   margin-bottom: 14px;
-  color: var(--amber);
+  color: var(--violet-soft);
 }
 .site-footer__col ul {
   display: grid;
@@ -2422,7 +2431,7 @@ html.js .approach__item.reveal.is-revealed {
   transition: color var(--fast) ease;
 }
 .site-footer__col a:hover {
-  color: var(--amber);
+  color: var(--violet-soft);
 }
 @media (min-width: 900px) {
   .site-footer__grid {
@@ -2484,7 +2493,7 @@ html.js .approach__item.reveal.is-revealed {
   transition: color var(--fast) ease;
 }
 .back-to-top:hover {
-  color: var(--amber);
+  color: var(--violet-soft);
 }
 .back-to-top svg {
   transition: transform var(--fast) var(--ease);
@@ -2531,8 +2540,8 @@ html.js .approach__item.reveal.is-revealed {
   z-index: 120;
   margin: 18px 0 0 18px;
   padding: 7px 12px;
-  background: var(--paper);
-  color: var(--ink);
+  background: var(--violet);
+  color: var(--paper);
   font-size: 10.5px;
   font-weight: 600;
   font-stretch: 112%;
