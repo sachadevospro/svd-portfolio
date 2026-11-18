@@ -1,32 +1,33 @@
 /* ==========================================================================
-   SACHA DEVOS — global styles (palette violet / noir / blanc)
+   SACHA DEVOS — global styles (palette violet #5600eb / blanc #cdcdcd / noir)
    1. Tokens        6. Hero             11. Lightbox
    2. Base          7. Selected work    12. Work index
    3. Type          8. Home sections    13. About
    4. Header        9. Series page      14. Contact & forms
    5. Menus         10. Gallery         15. Footer, 404, motion
+   16. Instagram CTA (bouton flottant animé)
    ========================================================================== */
 
 /* 1. Tokens ---------------------------------------------------------------- */
 :root {
   /* Les trois couleurs de la marque */
-  --violet: #7c3aed;
+  --violet: #5600eb;
   --ink: #0a090c;
-  --paper: #f3e8ff;
+  --paper: #cdcdcd;
 
   /* Nuances dérivées des trois couleurs (mélanges ink/paper/violet) */
-  --violet-soft: #b791f6; /* 50 % violet + 50 % blanc : texte accent, 7.9:1 sur --ink */
+  --violet-soft: #9d7bd9; /* 50 % violet + 50 % blanc : texte accent, 7.9:1 sur --ink */
   --ink-2: #161418; /* 5 % blanc sur noir */
   --ink-3: #1f1d22; /* 9 % blanc sur noir */
-  --ash: #a19aaa; /* texte secondaire : ~7.5:1 sur --ink */
+  --ash: #9a98a0; /* texte secondaire : ~7.5:1 sur --ink */
   --line: #28262c;
-  --line-soft: rgba(243, 232, 255, 0.1);
-  --steel: #c4bbce;
-  --signal: #b791f6; /* focus clavier uniquement */
+  --line-soft: rgba(205, 205, 205, 0.1);
+  --steel: #b0aeb4;
+  --signal: #9d7bd9; /* focus clavier uniquement */
 
   /* Couleurs de texte : tout l'accent passe par le violet.
      Les anciens noms sont conservés pour ne pas toucher au reste du CSS. */
-  --text: #f3e8ff;
+  --text: #cdcdcd;
   --amber: var(--violet-soft);
   --teal: var(--violet-soft);
   --rose: var(--violet-soft);
@@ -814,7 +815,7 @@ button {
   position: absolute;
   width: 18px;
   height: 18px;
-  border: 0 solid rgba(243, 232, 255, 0.55);
+  border: 0 solid rgba(205, 205, 205, 0.55);
   animation: frame-in 1200ms var(--ease) 600ms both;
 }
 .hero__frame span:nth-child(1) {
@@ -932,7 +933,7 @@ button {
   position: relative;
   width: 40px;
   height: 1px;
-  background: rgba(243, 232, 255, 0.3);
+  background: rgba(205, 205, 205, 0.3);
   overflow: hidden;
 }
 .hero__scroll-line::after {
@@ -1003,7 +1004,7 @@ button {
   display: block;
   width: 100%;
   height: 1px;
-  background: rgba(243, 232, 255, 0.3);
+  background: rgba(205, 205, 205, 0.3);
   overflow: hidden;
 }
 .hero__dot-fill::after {
@@ -2335,7 +2336,7 @@ html.js .approach__item.reveal.is-revealed {
 }
 .field select {
   appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%23a19aaa' stroke-width='1.2'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%239a98a0' stroke-width='1.2'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 2px center;
 }
@@ -2618,5 +2619,243 @@ html.js .approach__item.reveal.is-revealed {
   .mobile-menu__series li {
     transform: none;
     transition: opacity 300ms ease;
+  }
+}
+/* 16. Instagram CTA --------------------------------------------------------
+   Pastille fixe, visible dès l'arrivée sur le site et pendant tout le
+   défilement. Marquage à ajouter une seule fois (ex. dans le layout, juste
+   après le <header>) :
+
+   <a class="insta-cta" href="https://www.instagram.com/sacha_.raw/"
+      target="_blank" rel="noopener noreferrer"
+      aria-label="Instagram @sacha_.raw : vidéos et réalisations">
+     <span class="insta-cta__icon" aria-hidden="true">
+       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"
+            stroke-linecap="round" stroke-linejoin="round">
+         <rect x="3" y="3" width="18" height="18" rx="5" />
+         <circle cx="12" cy="12" r="4.2" />
+         <circle cx="17.3" cy="6.7" r="1" fill="currentColor" stroke="none" />
+       </svg>
+     </span>
+     <span class="insta-cta__text">
+       <span class="insta-cta__kicker">Vidéos &amp; réalisations</span>
+       <span class="insta-cta__handle">@sacha_.raw</span>
+     </span>
+     <svg class="insta-cta__arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+       <path d="M7 17L17 7M9 7h8v8" />
+     </svg>
+   </a>
+   -------------------------------------------------------------------------- */
+@property --insta-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.insta-cta {
+  position: fixed;
+  top: calc(var(--header-h) + 14px);
+  right: var(--gutter);
+  z-index: 60; /* au-dessus du header (50), sous le menu mobile (90) et la lightbox (100) */
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 7px 18px 7px 7px;
+  border: 2px solid transparent;
+  border-radius: 999px;
+  color: var(--paper);
+  overflow: hidden;
+  isolation: isolate;
+  /* Fond sombre à l'intérieur, anneau violet/blanc qui tourne autour */
+  background:
+    linear-gradient(rgba(10, 9, 12, 0.88), rgba(10, 9, 12, 0.88)) padding-box,
+    conic-gradient(
+        from var(--insta-angle),
+        var(--violet) 0%,
+        var(--paper) 25%,
+        var(--violet) 50%,
+        var(--violet-soft) 75%,
+        var(--violet) 100%
+      )
+      border-box;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 0 0 rgba(86, 0, 235, 0.55);
+  transition:
+    transform var(--fast) var(--ease),
+    color var(--fast) ease;
+}
+
+/* Reflet qui balaie la pastille */
+.insta-cta::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(
+    105deg,
+    transparent 35%,
+    rgba(205, 205, 205, 0.28) 50%,
+    transparent 65%
+  );
+  transform: translateX(-120%);
+}
+
+.insta-cta__icon {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--violet);
+  color: var(--paper);
+}
+.insta-cta__icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.insta-cta__text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+  text-align: left;
+}
+.insta-cta__kicker {
+  font-size: 9.5px;
+  font-weight: 500;
+  font-stretch: 112%;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--violet-soft);
+}
+.insta-cta__handle {
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+}
+
+.insta-cta__arrow {
+  flex: none;
+  width: 18px;
+  height: 18px;
+  color: var(--violet-soft);
+  transition:
+    transform var(--fast) var(--ease),
+    color var(--fast) ease;
+}
+
+.insta-cta:hover,
+.insta-cta:focus-visible {
+  transform: translateY(-2px) scale(1.03);
+  color: var(--paper);
+}
+.insta-cta:hover .insta-cta__arrow,
+.insta-cta:focus-visible .insta-cta__arrow {
+  transform: translate(3px, -3px);
+  color: var(--paper);
+}
+.insta-cta:hover .insta-cta__icon,
+.insta-cta:focus-visible .insta-cta__icon {
+  background: var(--paper);
+  color: var(--violet);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .insta-cta {
+    animation:
+      insta-in 1100ms var(--ease) 1400ms both,
+      insta-spin 5s linear 1400ms infinite,
+      insta-pulse 2.8s ease-out 2600ms infinite;
+  }
+  .insta-cta::after {
+    animation: insta-shine 4.2s var(--ease-io) 3s infinite;
+  }
+  .insta-cta__icon {
+    animation: insta-wiggle 5.6s ease-in-out 3.4s infinite;
+  }
+}
+
+@keyframes insta-in {
+  0% {
+    opacity: 0;
+    transform: translateX(140%) scale(0.9);
+  }
+  60% {
+    opacity: 1;
+    transform: translateX(-6%) scale(1.04);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes insta-spin {
+  to {
+    --insta-angle: 360deg;
+  }
+}
+@keyframes insta-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(86, 0, 235, 0.6);
+  }
+  70%,
+  100% {
+    box-shadow: 0 0 0 20px rgba(86, 0, 235, 0);
+  }
+}
+@keyframes insta-shine {
+  0%,
+  55% {
+    transform: translateX(-120%);
+  }
+  100% {
+    transform: translateX(120%);
+  }
+}
+@keyframes insta-wiggle {
+  0%,
+  86%,
+  100% {
+    transform: rotate(0deg) scale(1);
+  }
+  90% {
+    transform: rotate(-14deg) scale(1.12);
+  }
+  94% {
+    transform: rotate(12deg) scale(1.12);
+  }
+  97% {
+    transform: rotate(-6deg) scale(1.05);
+  }
+}
+
+/* Mobile : plus compact, le libellé du haut disparaît mais le pseudo reste lisible */
+@media (max-width: 699px) {
+  .insta-cta {
+    top: calc(var(--header-h) + 10px);
+    gap: 10px;
+    padding: 5px 14px 5px 5px;
+  }
+  .insta-cta__icon {
+    width: 34px;
+    height: 34px;
+  }
+  .insta-cta__icon svg {
+    width: 19px;
+    height: 19px;
+  }
+  .insta-cta__kicker {
+    display: none;
+  }
+  .insta-cta__handle {
+    font-size: 14px;
+  }
+  .insta-cta__arrow {
+    width: 16px;
+    height: 16px;
   }
 }
